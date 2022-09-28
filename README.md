@@ -1,14 +1,14 @@
 # Laravel Subscriptions
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sagitarius29/laravel-subscriptions.svg?style=flat-square)](https://packagist.org/packages/sagitarius29/laravel-subscriptions)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/beksos/laravel-subscriptions.svg?style=flat-square)](https://packagist.org/packages/beksos/laravel-subscriptions)
 [![StyleCI](https://github.styleci.io/repos/217646946/shield)](https://github.styleci.io/repos/217646946)
-[![Build Status](https://img.shields.io/travis/sagitarius29/laravel-subscriptions/master.svg?style=flat-square)](https://travis-ci.org/sagitarius29/laravel-subscriptions)
-[![Quality Score](https://img.shields.io/scrutinizer/g/sagitarius29/laravel-subscriptions.svg?style=flat-square)](https://scrutinizer-ci.com/g/sagitarius29/laravel-subscriptions)
-[![Total Downloads](https://img.shields.io/packagist/dt/sagitarius29/laravel-subscriptions.svg?style=flat-square)](https://packagist.org/packages/sagitarius29/laravel-subscriptions)
+[![Build Status](https://img.shields.io/travis/beksos/laravel-subscriptions/master.svg?style=flat-square)](https://travis-ci.org/beksos/laravel-subscriptions)
+[![Quality Score](https://img.shields.io/scrutinizer/g/beksos/laravel-subscriptions.svg?style=flat-square)](https://scrutinizer-ci.com/g/beksos/laravel-subscriptions)
+[![Total Downloads](https://img.shields.io/packagist/dt/beksos/laravel-subscriptions.svg?style=flat-square)](https://packagist.org/packages/beksos/laravel-subscriptions)
 
 A simple laravel package for Subscriptions.
 
-All ideas are welcome, please send your issue in: [Send your issues in here](https://github.com/sagitarius29/laravel-subscriptions/issues/new)
+All ideas are welcome, please send your issue in: [Send your issues in here](https://github.com/BechirAhmed/laravel-subscriptions/issues/new)
 
 ## Installation
 
@@ -17,7 +17,7 @@ You can install the package via composer:
 **This package work in laravel 5.8 or later because Carbon is updated to 2.0.**
 
 ```bash
-composer require sagitarius29/laravel-subscriptions
+composer require beksos/laravel-subscriptions
 ```
 
 #### Register Service Provider
