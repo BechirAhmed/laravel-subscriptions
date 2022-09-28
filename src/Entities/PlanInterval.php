@@ -1,10 +1,10 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Entities;
+namespace Beksos\LaravelSubscriptions\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Sagitarius29\LaravelSubscriptions\Contracts\PlanIntervalContract;
-use Sagitarius29\LaravelSubscriptions\Exceptions\IntervalErrorException;
+use Beksos\LaravelSubscriptions\Contracts\PlanIntervalContract;
+use Beksos\LaravelSubscriptions\Exceptions\IntervalErrorException;
 
 class PlanInterval extends Model implements PlanIntervalContract
 {

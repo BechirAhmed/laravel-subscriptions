@@ -1,8 +1,8 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Traits;
+namespace Beksos\LaravelSubscriptions\Traits;
 
-use Sagitarius29\LaravelSubscriptions\Contracts\PlanIntervalContract;
+use Beksos\LaravelSubscriptions\Contracts\PlanIntervalContract;
 
 trait HasManyIntervals
 {

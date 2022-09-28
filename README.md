@@ -21,21 +21,21 @@ composer require sagitarius29/laravel-subscriptions
 ```
 
 #### Register Service Provider
-Add `Sagitarius29\LaravelSubscriptions\LaravelSubscriptionsServiceProvider::class` to your file `config/app.php`
+Add `Beksos\LaravelSubscriptions\LaravelSubscriptionsServiceProvider::class` to your file `config/app.php`
 
 ```php
 'providers' => [
     /**
     * Some Providers
     */
-    Sagitarius29\LaravelSubscriptions\LaravelSubscriptionsServiceProvider::class
+    Beksos\LaravelSubscriptions\LaravelSubscriptionsServiceProvider::class
 ]
 ```
 
 #### Config file and migrations
 Publish package config file and migrations with the following command:
 ```cmd
-php artisan vendor:publish --provider="Sagitarius29\LaravelSubscriptions\LaravelSubscriptionsServiceProvider"
+php artisan vendor:publish --provider="Beksos\LaravelSubscriptions\LaravelSubscriptionsServiceProvider"
 ```
 
 Then run migrations:
@@ -57,7 +57,7 @@ php artisan migrate
 ### Configure your User model for use subscriptions
 ````php
 <?php
-use Sagitarius29\LaravelSubscriptions\Traits\HasSubscriptions;
+use Beksos\LaravelSubscriptions\Traits\HasSubscriptions;
 
 class User extends Authenticable
 {
@@ -68,10 +68,10 @@ class User extends Authenticable
 
 ```php
 <?php
-use Sagitarius29\LaravelSubscriptions\Entities\Plan;
-use Sagitarius29\LaravelSubscriptions\Entities\PlanFeature;
-use \Sagitarius29\LaravelSubscriptions\Entities\PlanConsumable;
-use Sagitarius29\LaravelSubscriptions\Entities\PlanInterval;
+use Beksos\LaravelSubscriptions\Entities\Plan;
+use Beksos\LaravelSubscriptions\Entities\PlanFeature;
+use \Beksos\LaravelSubscriptions\Entities\PlanConsumable;
+use Beksos\LaravelSubscriptions\Entities\PlanInterval;
 
 $plan = Plan::create(
         'name of plan', //name
@@ -102,7 +102,7 @@ $plan->isNotFree(); // return true;
 ### An user can subscribe to a plan
 ```php
 <?php
-use Sagitarius29\LaravelSubscriptions\Entities\Plan;
+use Beksos\LaravelSubscriptions\Entities\Plan;
 
 $user = \Auth::user();
 $plan = Plan::find(1);
@@ -118,7 +118,7 @@ $currentSubscription = $user->getActiveSubscription(); // return Subscription ob
 ## Upgrade or Downgrade Subscription
 ````php
 <?php
-use Sagitarius29\LaravelSubscriptions\Entities\Plan;
+use Beksos\LaravelSubscriptions\Entities\Plan;
 
 $user = \Auth::user();
 $firstPlan = Plan::find(1);

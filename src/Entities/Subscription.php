@@ -1,14 +1,14 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Entities;
+namespace Beksos\LaravelSubscriptions\Entities;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Sagitarius29\LaravelSubscriptions\Contracts\PlanContract;
-use Sagitarius29\LaravelSubscriptions\Contracts\SubscriptionContact;
-use Sagitarius29\LaravelSubscriptions\Exceptions\SubscriptionErrorException;
+use Beksos\LaravelSubscriptions\Contracts\PlanContract;
+use Beksos\LaravelSubscriptions\Contracts\SubscriptionContact;
+use Beksos\LaravelSubscriptions\Exceptions\SubscriptionErrorException;
 
 class Subscription extends Model implements SubscriptionContact
 {

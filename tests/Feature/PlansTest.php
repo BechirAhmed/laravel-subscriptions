@@ -4,15 +4,15 @@ namespace Orchestra\Testbench\Tests\Databases;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Sagitarius29\LaravelSubscriptions\Entities\Plan;
-use Sagitarius29\LaravelSubscriptions\Entities\PlanFeature;
-use Sagitarius29\LaravelSubscriptions\Entities\PlanInterval;
-use Sagitarius29\LaravelSubscriptions\Exceptions\PlanErrorException;
-use Sagitarius29\LaravelSubscriptions\Tests\Entities\PlanManyIntervals;
-use Sagitarius29\LaravelSubscriptions\Tests\Entities\User;
-use Sagitarius29\LaravelSubscriptions\Tests\TestCase;
-use Sagitarius29\LaravelSubscriptions\Traits\HasManyIntervals;
-use Sagitarius29\LaravelSubscriptions\Traits\HasSingleInterval;
+use Beksos\LaravelSubscriptions\Entities\Plan;
+use Beksos\LaravelSubscriptions\Entities\PlanFeature;
+use Beksos\LaravelSubscriptions\Entities\PlanInterval;
+use Beksos\LaravelSubscriptions\Exceptions\PlanErrorException;
+use Beksos\LaravelSubscriptions\Tests\Entities\PlanManyIntervals;
+use Beksos\LaravelSubscriptions\Tests\Entities\User;
+use Beksos\LaravelSubscriptions\Tests\TestCase;
+use Beksos\LaravelSubscriptions\Traits\HasManyIntervals;
+use Beksos\LaravelSubscriptions\Traits\HasSingleInterval;
 
 class PlansTest extends TestCase
 {

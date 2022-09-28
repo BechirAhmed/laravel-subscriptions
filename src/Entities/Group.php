@@ -1,10 +1,10 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Entities;
+namespace Beksos\LaravelSubscriptions\Entities;
 
 use Illuminate\Database\Eloquent\Builder;
-use Sagitarius29\LaravelSubscriptions\Contracts\GroupContract;
-use Sagitarius29\LaravelSubscriptions\Contracts\PlanContract;
+use Beksos\LaravelSubscriptions\Contracts\GroupContract;
+use Beksos\LaravelSubscriptions\Contracts\PlanContract;
 
 class Group implements GroupContract
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Exceptions;
+namespace Beksos\LaravelSubscriptions\Exceptions;
 
 class PlanErrorException extends \Exception
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Entities;
+namespace Beksos\LaravelSubscriptions\Entities;
 
-use Sagitarius29\LaravelSubscriptions\Plan as PlanBase;
-use Sagitarius29\LaravelSubscriptions\Traits\HasSingleInterval;
+use Beksos\LaravelSubscriptions\Plan as PlanBase;
+use Beksos\LaravelSubscriptions\Traits\HasSingleInterval;
 
 class Plan extends PlanBase
 {

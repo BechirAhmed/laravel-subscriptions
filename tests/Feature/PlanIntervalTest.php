@@ -1,11 +1,11 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Tests\Feature;
+namespace Beksos\LaravelSubscriptions\Tests\Feature;
 
-use Sagitarius29\LaravelSubscriptions\Entities\Plan;
-use Sagitarius29\LaravelSubscriptions\Entities\PlanInterval;
-use Sagitarius29\LaravelSubscriptions\Exceptions\IntervalErrorException;
-use Sagitarius29\LaravelSubscriptions\Tests\TestCase;
+use Beksos\LaravelSubscriptions\Entities\Plan;
+use Beksos\LaravelSubscriptions\Entities\PlanInterval;
+use Beksos\LaravelSubscriptions\Exceptions\IntervalErrorException;
+use Beksos\LaravelSubscriptions\Tests\TestCase;
 
 class PlanIntervalTest extends TestCase
 {

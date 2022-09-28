@@ -1,14 +1,14 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions;
+namespace Beksos\LaravelSubscriptions;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Sagitarius29\LaravelSubscriptions\Contracts\GroupContract;
-use Sagitarius29\LaravelSubscriptions\Contracts\PlanContract;
-use Sagitarius29\LaravelSubscriptions\Entities\Group;
-use Sagitarius29\LaravelSubscriptions\Exceptions\PlanErrorException;
-use Sagitarius29\LaravelSubscriptions\Traits\HasFeatures;
+use Beksos\LaravelSubscriptions\Contracts\GroupContract;
+use Beksos\LaravelSubscriptions\Contracts\PlanContract;
+use Beksos\LaravelSubscriptions\Entities\Group;
+use Beksos\LaravelSubscriptions\Exceptions\PlanErrorException;
+use Beksos\LaravelSubscriptions\Traits\HasFeatures;
 
 abstract class Plan extends Model implements PlanContract
 {

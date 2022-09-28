@@ -1,9 +1,9 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Tests\Entities;
+namespace Beksos\LaravelSubscriptions\Tests\Entities;
 
 use Illuminate\Foundation\Auth\User as Authenticable;
-use Sagitarius29\LaravelSubscriptions\Traits\HasSubscriptions;
+use Beksos\LaravelSubscriptions\Traits\HasSubscriptions;
 
 class User extends Authenticable
 {

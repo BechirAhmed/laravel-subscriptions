@@ -1,6 +1,6 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions;
+namespace Beksos\LaravelSubscriptions;
 
 class LaravelSubscriptions
 {

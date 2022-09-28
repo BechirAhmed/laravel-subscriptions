@@ -1,9 +1,9 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Tests\Entities;
+namespace Beksos\LaravelSubscriptions\Tests\Entities;
 
-use Sagitarius29\LaravelSubscriptions\Plan;
-use Sagitarius29\LaravelSubscriptions\Traits\HasManyIntervals;
+use Beksos\LaravelSubscriptions\Plan;
+use Beksos\LaravelSubscriptions\Traits\HasManyIntervals;
 
 class PlanManyIntervals extends Plan
 {

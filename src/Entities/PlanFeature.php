@@ -1,9 +1,9 @@
 <?php
 
-namespace Sagitarius29\LaravelSubscriptions\Entities;
+namespace Beksos\LaravelSubscriptions\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Sagitarius29\LaravelSubscriptions\PlanFeature as PlanFeatureBase;
+use Beksos\LaravelSubscriptions\PlanFeature as PlanFeatureBase;
 
 class PlanFeature extends PlanFeatureBase
 {
