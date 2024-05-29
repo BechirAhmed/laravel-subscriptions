@@ -33,6 +33,7 @@ abstract class Plan extends Model implements PlanContract
     public static function create(
         string $name,
         string $description,
+        int $free_days,
         int $sort_order,
         bool $is_enabled = false,
         bool $is_default = false,
@@ -41,6 +42,7 @@ abstract class Plan extends Model implements PlanContract
         $attributes = [
             'name'        => $name,
             'description' => $description,
+            'free_days'   => $free_days,
             'sort_order'  => $sort_order,
             'is_enabled'  => $is_enabled,
             'is_default'  => $is_default,
@@ -172,6 +174,11 @@ abstract class Plan extends Model implements PlanContract
     public function getDescription()
     {
         return $this->description;
+    }
+    
+    public function getFreeDays()
+    {
+        return $this->free_days;
     }
 
     public function delete()
