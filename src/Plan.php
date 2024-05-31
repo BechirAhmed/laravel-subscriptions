@@ -20,6 +20,13 @@ abstract class Plan extends Model implements PlanContract
         'name', 'description', 'free_days', 'sort_order', 'is_enabled', 'is_default', 'group',
     ];
 
+    protected static function boot() {
+        parent::boot();
+        static::addGlobalScope('order', function (Builder $builder) {
+            $builder->orderBy('sort_order', 'asc');
+        });
+    }
+    
     /**
      * @param  string  $name
      * @param  string  $description

@@ -13,6 +13,13 @@ abstract class PlanFeature extends Model
         'code', 'value', 'sort_order', 'is_consumable',
     ];
 
+    protected static function boot() {
+        parent::boot();
+        static::addGlobalScope('order', function (Builder $builder) {
+            $builder->orderBy('sort_order', 'asc');
+        });
+    }
+
     public function plan(): BelongsTo
     {
         return $this->belongsTo(config('subscriptions.entities.plan'));

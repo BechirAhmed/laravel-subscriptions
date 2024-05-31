@@ -15,6 +15,11 @@ trait HasFeatures
     {
         $this->features()->save($feature);
     }
+    
+    public function updateFeature(PlanFeature $feature)
+    {
+        $this->features()->update($feature);
+    }
 
     public function features(): HasMany
     {
