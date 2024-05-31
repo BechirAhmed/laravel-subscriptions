@@ -83,9 +83,27 @@ trait HasSubscriptions
      */
     public function getActiveSubscription(): ?SubscriptionContact
     {
-        return $this->subscriptions()
-            ->current()
-            ->first();
+        $subscription = $this->subscriptions()
+                                ->current()
+                                ->first();
+        
+        if($subscription != null) {
+            if($subscription->status == 'ON_TRIAL'){
+                $free_days = $subscription->plan->free_days;
+                $trial_end_date = Carbon::parse($subscription->start_at)->addDays($free_days);
+                if ($trial_end_date->isFuture()) {
+                    $subscription->remaining_days = $trial_end_date->diffInDays(Carbon::now());
+                }else{
+                    $subscription->status = 'INACTIVE';
+                    $subscription->save();
+                    $subscription->remaining_days = 0;
+                }
+                $subscription->features = $subscription->plan->features;
+                return $subscription;
+            }
+            $subscription->features = $subscription->plan->features;
+        }
+        return $subscription;
     }
 
     private function calculateExpireDate(Carbon $start_at, PlanIntervalContract $interval)
