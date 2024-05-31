@@ -4,6 +4,7 @@ namespace Beksos\LaravelSubscriptions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Builder;
 
 abstract class PlanFeature extends Model
 {
