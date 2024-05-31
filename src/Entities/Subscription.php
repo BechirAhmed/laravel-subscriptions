@@ -15,12 +15,17 @@ class Subscription extends Model implements SubscriptionContact
     protected $table = 'subscriptions';
 
     protected $fillable = [
-        'plan_id', 'start_at', 'end_at',
+        'plan_id', 'start_at', 'end_at', 'status'
     ];
 
     protected $dates = [
         'start_at', 'end_at',
     ];
+
+    public const STATUS_ACTIVE = 'ACTIVE';
+    public const STATUS_INACTIVE = 'INACTIVE';
+    public const STATUS_ON_TRIAL = 'ON_TRIAL';
+    public const STATUS_CANCELLED = 'CANCELLED';
 
     public static function make(PlanContract $plan, Carbon $start_at, Carbon $end_at = null): Model
     {
@@ -39,7 +44,7 @@ class Subscription extends Model implements SubscriptionContact
     {
         $today = now();
 
-        return $q->where('start_at', '<=', $today)
+        return $q->where('status', '!=', 'INACTIVE')->where('start_at', '<=', $today)
             ->where(function ($query) use ($today) {
                 $query->where('end_at', '>=', $today)->orWhereNull('end_at');
             });
@@ -49,7 +54,7 @@ class Subscription extends Model implements SubscriptionContact
     {
         $today = now();
 
-        return $q->where(function ($query) use ($today) {
+        return $q->where('status', '!=', 'INACTIVE')->where(function ($query) use ($today) {
             $query->where('end_at', '>=', $today)->orWhereNull('end_at');
         });
     }
@@ -83,6 +88,11 @@ class Subscription extends Model implements SubscriptionContact
         return $this->start_at;
     }
 
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+    
     public function subscriber()
     {
         return $this->morphTo();

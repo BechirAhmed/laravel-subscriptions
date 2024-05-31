@@ -95,7 +95,6 @@ trait HasSubscriptions
                     $subscription->remaining_days = $trial_end_date->diffInDays(Carbon::now());
                 }else{
                     $subscription->status = 'INACTIVE';
-                    $subscription->save();
                     $subscription->remaining_days = 0;
                 }
                 $subscription->features = $subscription->plan->features;
