@@ -97,10 +97,8 @@ trait HasSubscriptions
                     $subscription->status = 'INACTIVE';
                     $subscription->remaining_days = 0;
                 }
-                $subscription->features = $subscription->plan->features;
                 return $subscription;
             }
-            $subscription->features = $subscription->plan->features;
         }
         return $subscription;
     }
