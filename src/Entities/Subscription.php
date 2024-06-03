@@ -40,6 +40,18 @@ class Subscription extends Model implements SubscriptionContact
         ]);
     }
 
+    //mark subscription as ACTIVE
+    public function activate()
+    {
+        if($this->status == self::STATUS_ACTIVE) {
+            throw new SubscriptionErrorException('Subscription already activated');
+        }
+        if($this->status == self::STATUS_INACTIVE) {
+            throw new SubscriptionErrorException('Subscription already expired');
+        }
+        return $this->update(['status' => self::STATUS_ACTIVE]);
+    }
+
     public function scopeCurrent(Builder $q)
     {
         $today = now();
@@ -92,7 +104,7 @@ class Subscription extends Model implements SubscriptionContact
     {
         return $this->status;
     }
-    
+
     public function subscriber()
     {
         return $this->morphTo();
